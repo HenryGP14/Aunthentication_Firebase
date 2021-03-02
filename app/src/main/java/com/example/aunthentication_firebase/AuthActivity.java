@@ -39,7 +39,7 @@ public class AuthActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser usuario = firebaseAuth.getCurrentUser();
                 if (usuario != null) {
-                    Toast.makeText(AuthActivity.this, "Se inicio sessión", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AuthActivity.this, "Se inició sesión", Toast.LENGTH_LONG).show();
                 } else {
                     startActivityForResult(
                             AuthUI.getInstance()
@@ -68,7 +68,7 @@ public class AuthActivity extends AppCompatActivity {
         AuthUI.getInstance().signOut(this).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(AuthActivity.this, "La sessión ha sido cerrada", Toast.LENGTH_LONG).show();
+                Toast.makeText(AuthActivity.this, "La sesión ha sido cerrada", Toast.LENGTH_LONG).show();
             }
         });
     }
